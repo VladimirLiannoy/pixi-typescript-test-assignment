@@ -24,8 +24,6 @@ window.onload = async (): Promise<void> => {
     const backgroundTexture = loader.resources["background"].texture;
     const backgroundSprite = new Sprite(backgroundTexture);
 
-    // All YOUR CODE GOES HERE (for example)
-
     stage.addChild(backgroundSprite);
 };
 
