@@ -11,14 +11,13 @@
         "prettier:format": "npm run prettier -- --write src/**/*.ts",
         "prettier:check": "npm run prettier -- -c ./src/**/*.ts",
         "lint-check": "npx eslint ./src/**/*.ts",
-        "code-style-check": "npm run lint-check && npm run prettier:check",
-        "prepare": "husky install"
+        "code-style-check": "npm run lint-check && npm run prettier:check"
     },
     "author": "JFTW",
     "license": "MIT",
     "dependencies": {
-        "core-js": "^3.12.1",
-        "pixi.js": "^6.0.2"
+        "core-js": "^3.20.3",
+        "pixi.js": "^6.2.2"
     },
     "devDependencies": {
         "@babel/core": "^7.13.16",
@@ -34,7 +33,7 @@
         "@types/jest": "^26.0.23",
         "@types/mini-css-extract-plugin": "^1.4.2",
         "@types/node": "^15.3.0",
-        "@types/optimize-css-assets-webpack-plugin": "^5.0.3",
+        "@types/pixi.js": "^5.0.0",
         "@types/terser-webpack-plugin": "^5.0.3",
         "@types/webpack": "^5.28.0",
         "@types/webpack-merge": "^4.1.5",
@@ -50,13 +49,11 @@
         "eslint-loader": "^4.0.2",
         "eslint-plugin-prettier": "^3.4.0",
         "html-webpack-plugin": "^5.3.1",
-        "husky": "^6.0.0",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^26.6.3",
         "jest-canvas-mock": "^2.3.1",
         "jsdom": "^16.5.3",
         "mini-css-extract-plugin": "^1.6.0",
-        "optimize-css-assets-webpack-plugin": "^5.0.4",
         "prettier": "^2.2.1",
         "pretty-quick": "^3.1.0",
         "terser-webpack-plugin": "^5.1.1",

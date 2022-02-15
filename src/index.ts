@@ -1,12 +1,11 @@
-import * as PIXI from "pixi.js";
 import "./style.css";
 import Assets from "./assets";
-import { Sprite } from "pixi.js";
+import { Sprite, Application, Loader } from "pixi.js";
 
 const gameWidth = 1136;
 const gameHeight = 640;
 
-const app = new PIXI.Application({
+const app = new Application({
     backgroundColor: 0xd3d3d3,
     width: gameWidth,
     height: gameHeight,
@@ -27,20 +26,20 @@ window.onload = async (): Promise<void> => {
     stage.addChild(backgroundSprite);
 };
 
-async function loadGameAssets(): Promise<PIXI.Loader> {
-    return new Promise((res, rej) => {
-        const loader = PIXI.Loader.shared;
+async function loadGameAssets(): Promise<Loader> {
+    return new Promise((resolve, reject) => {
+        const loader = Loader.shared;
 
         for (const asset in Assets) {
             loader.add(asset, Assets[asset]);
         }
 
         loader.onComplete.once(() => {
-            res(loader);
+            resolve(loader);
         });
 
         loader.onError.once(() => {
-            rej();
+            reject();
         });
 
         loader.load();
